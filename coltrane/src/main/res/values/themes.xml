@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.Coltrane" parent="Theme.AppCompat.DayNight">
+        <item name="colorPrimary">@color/primary</item>
+    </style>
+
+    <style name="Theme.Coltrane.ToolbarStyle" parent="Theme.Coltrane">
+        <item name="android:color">@color/white</item>
+    </style>
+</resources>

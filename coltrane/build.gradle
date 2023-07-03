@@ -1,0 +1,99 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    //To test local the library before to publish add the plugin to check is everything is correct
+    id 'maven-publish'
+}
+
+android {
+    namespace 'com.frog.coltrane'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 22
+        targetSdk 33
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
+
+//Adding script to publish script
+
+// Because the components are created only during the afterEvaluate phase, you must
+//configure your publications using the afterEvaluate() lifecycle method.
+//PRINTING COMPONENTS
+// println("Components: " + components*.name)
+/*
+android {
+    publishing {
+        multipleVariants("custom") {
+            includeBuildTypeValues("debug", "release")
+            includeFlavorDimensionAndValues(
+                    dimension = "color",
+                    values = arrayOf("blue", "pink")
+            )
+            includeFlavorDimensionAndValues(
+                    dimension = "shape",
+                    values = arrayOf("square")
+            )
+        }
+    }
+}*/
+
+
+
+afterEvaluate {
+    println("Components: " + components*.name)
+    publishing {
+        publications {
+
+
+            // Creates a Maven publication called "release". RELEASE ONLY
+            /*release(MavenPublication) {
+
+                    // Applies the component for the release build variant.
+                    from components.release
+                    // You can then customize attributes of the publication as shown below.
+                    groupId = 'com.frog'
+                    artifactId = 'coltrane'
+                    version = '1.0'
+
+            }
+            // Creates a Maven publication called “debug”.
+            */debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+
+                    from components.debug
+                    groupId = 'com.frog'
+                    artifactId = 'coltrane'
+                    version = '1.0'
+//EXAMPLE HOW TO CREATE DEPENDENCIE PATHERN
+//com.frog.coltrane:1.0
+            }
+        }
+    }
+}

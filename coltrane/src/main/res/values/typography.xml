@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Display styles -->
+    <style name="coltrane_text" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/assistant_regular</item>
+    </style>
+    <style name="coltrane_text_display_large" parent="coltrane_text">
+        <item name="android:textSize">57sp</item>
+    </style>
+    <style name="coltrane_text_display_medium" parent="coltrane_text_display_large">
+        <item name="android:textSize">45sp</item>
+    </style>
+    <style name="coltrane_text_display_small" parent="coltrane_text_display_large">
+        <item name="android:textSize">36sp</item>
+    </style>
+    <!-- Headline styles -->
+    <style name="coltrane_text_headline_large" parent="coltrane_text">
+        <item name="android:textSize">32sp</item>
+    </style>
+    <style name="coltrane_text_headline_medium" parent="coltrane_text_headline_large">
+        <item name="android:textSize">28sp</item>
+    </style>
+    <style name="coltrane_text_headline_small" parent="coltrane_text_headline_large">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!-- Title styles -->
+    <style name="coltrane_text_title_large" parent="coltrane_text">
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="coltrane_text_title_medium" parent="coltrane_text_title_large">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="coltrane_text_title_small" parent="coltrane_text_title_large">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Label styles -->
+    <style name="coltrane_text_label_large" parent="coltrane_text">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="coltrane_text_label_medium" parent="coltrane_text_label_large">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="coltrane_text_label_small" parent="coltrane_text_label_large">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <!-- Body styles -->
+    <style name="coltrane_text_body_large" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="coltrane_text_body_medium" parent="coltrane_text_body_large">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="coltrane_text_body_small" parent="coltrane_text_body_large">
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

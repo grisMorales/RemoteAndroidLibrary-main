@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">@color/purple_500</color>
+    <color name="secondary">@color/teal_200</color>
+    <color name="text">@color/white</color>
+</resources>

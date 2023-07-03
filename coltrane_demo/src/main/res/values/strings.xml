@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Coltrane Demo Application</string>
+    <string name="app_message">This is an example of usage of coltrane typographies on a Kotlin application that loads activity from XML</string>
+</resources>
