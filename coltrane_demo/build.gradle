@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.frog.coltrane_demo'
+    namespace 'com.coppel.coltrane_demo'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.frog.coltrane_demo"
+        applicationId "com.coppel.coltrane_demo"
         minSdk 22
         targetSdk 33
         versionCode 1
@@ -43,8 +43,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-    //implementation project(':coltrane')
+    implementation project(':coltrane')
     //Instead of local implementation changes to local maven implementation
-    implementation 'com.frog.coltrane:1.0'
+    //implementation 'com.frog.coltrane:1.0'  //INTENT FAILED
+
+    //implementation 'com.github.grisMorales.RemoteAndroidLibrary-main:1.0'  //REMOTE IMPLEMENTATION
 
 }

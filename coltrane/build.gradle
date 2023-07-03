@@ -88,8 +88,8 @@ afterEvaluate {
                 // Applies the component for the debug build variant.
 
                     from components.debug
-                    groupId = 'com.frog'
-                    artifactId = 'coltrane'
+                    groupId = 'com.github.grisMorales' //USER NAME TO REMOTE   'com.frog'  'com.github.grisMorales'
+                    artifactId = 'emoteAndroidLibrary-main'//'coltrane'  'RemoteAndroidLibrary-main'
                     version = '1.0'
 //EXAMPLE HOW TO CREATE DEPENDENCIE PATHERN
 //com.frog.coltrane:1.0
